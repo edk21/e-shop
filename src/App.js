@@ -26,9 +26,9 @@ function App() {
 
             <Route component={Default}/>
           </Switch>
+          <Modal />
         </React.Fragment>
       </Router>
-      <Modal />
     </ProductProvider>
   );
 }

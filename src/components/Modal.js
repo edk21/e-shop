@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import { ProductConsumer } from "../Context";
-import { Link, MemoryRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Modal extends Component {
     render() { 
@@ -23,22 +23,19 @@ class Modal extends Component {
                                         <img src={img} alt="product" className="img-fluid"/>
                                         <h5>{title}</h5>
                                         <h5 className="text-muted">price: €    {price}</h5>
-                                        <MemoryRouter>
                                         <Link to="/">
                                             <ButtonContainer onClick={() =>
                                             closeModal()}>
                                                 store
                                             </ButtonContainer>
                                         </Link>
-                                        </MemoryRouter>
-                                        <MemoryRouter>
-                                        <Link to="/Cart">
+                                        
+                                        <Link to="/cart">
                                             <ButtonContainer cart onClick={() =>
                                             closeModal()}>
                                                 Go to cart
                                             </ButtonContainer>
                                         </Link>
-                                        </MemoryRouter>
                                     </div>
                                 </div>
                             </div>
